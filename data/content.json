@@ -1,0 +1,266 @@
+{
+  "de": {
+    "site": {
+      "name": "GeoMessTechnik Heger",
+      "description": "Vermessungskreisel für Tunnelvortriebe, Bergbau, Ausbildung und Militär",
+      "phone": "+49 395 582 668 0",
+      "email": "info@gmt-heger.com"
+    },
+    "navigation": [
+      { "label": "Startseite", "href": "/" },
+      { "label": "Kreisel", "href": "/gyroscopes" },
+      { "label": "Reparatur", "href": "/repair" },
+      { "label": "Ankauf", "href": "/purchase" },
+      { "label": "Kontakt", "href": "/contact" }
+    ],
+    "home": {
+      "hero": {
+        "title": "Vermessungskreisel",
+        "subtitle": "Präzisionstechnik seit über 30 Jahren",
+        "description": "GeoMessTechnik Heger entwickelt und produziert seit über 30 Jahren Vermessungskreisel für Tunnelvortriebe, Bergbau, Ausbildung und Militär. Wir sind auf Aufsatzkreisel spezialisiert, die mit fast allen Theodoliten und Tachymetern kombiniert werden können."
+      },
+      "sections": [
+        {
+          "id": "gyroscopes",
+          "title": "Vermessungskreisel",
+          "description": "Wir sind auf Aufsatzkreisel spezialisiert, die mit fast allen Theodoliten und Tachymetern kombiniert werden können. Für spezielle Anwendungen entwerfen wir auch Adapter und Messwerkzeuge.",
+          "link": "/gyroscopes",
+          "linkText": "Lesen Sie mehr"
+        },
+        {
+          "id": "repair",
+          "title": "Reparatur",
+          "description": "Wir kalibrieren, warten und reparieren Vermessungskreisel, z. B. Wild GAK. Des Weiteren kaufen wir Wild-GAK-Gyroskope, auch defekte.",
+          "link": "/repair",
+          "linkText": "Lesen Sie mehr"
+        },
+        {
+          "id": "purchase",
+          "title": "Ankauf",
+          "description": "Wir kaufen ständig neue, gebrauchte und historische Vermessungsinstrumente sowie Zubehör und Literatur an.",
+          "link": "/purchase",
+          "linkText": "Lesen Sie mehr"
+        }
+      ],
+      "featured": {
+        "title": "GYROMAX™-Vermessungskreisel",
+        "subtitle": "GYROMAX™ AK-2M",
+        "description": "Unser Flaggschiff-Präzisionsinstrument für professionelle Vermessungsanwendungen."
+      }
+    },
+    "gyroscopes": {
+      "title": "Vermessungskreisel",
+      "description": "Professionelle Präzisionsinstrumente für anspruchsvolle Anwendungen",
+      "intro": "GeoMessTechnik Heger entwickelt und produziert seit über 30 Jahren Vermessungskreisel für Tunnelvortriebe, Bergbau, Ausbildung und Militär.",
+      "sections": [
+        {
+          "heading": "Produktspektrum",
+          "body": "Wir sind auf Aufsatzkreisel spezialisiert, die mit fast allen Theodoliten und Tachymetern kombiniert werden können. Für spezielle Anwendungen entwerfen wir auch Adapter und Messwerkzeuge. Unser Hauptprodukt ist die GYROMAX™-Reihe von Vermessungskreiseln."
+        }
+      ],
+      "applicationsHeading": "Anwendungsgebiete",
+      "applications": [
+        "Ausbildung an Hochschulen und Universitäten",
+        "Richtungskontrolle im Tunnelbau",
+        "Bergbau",
+        "Schnelle Orientierung zu geographisch Nord"
+      ],
+      "gyromaxBody": "Mit GYROMAX™ kann geographisch Nord innerhalb von 15 Minuten fixiert werden. Die Berechnung und Verfolgung von geographisch Nord kann auf drei verschiedene Arten erfolgen.\n\nDie mitgelieferte Fernbedienung ermöglicht die Steuerung (Dämpfung, Umkehrpunkte) des GYROMAX™. Die Datenübertragung zum Computer oder PDA erfolgt wahlweise per Kabel oder Bluetooth® (IEEE 802.15.1).",
+      "techDataHeading": "Technische Daten",
+      "techDataProduct": "GYROMAX™ AK-2M",
+      "techDataRows": [
+        { "label": "Genauigkeit", "value": "< 6 mgon (< 20″)" },
+        { "label": "Messdauer", "value": "ca. 15 min" },
+        { "label": "Stromversorgung", "value": "24 V" },
+        { "label": "Größe (Transportkoffer)", "value": "540 × 340 × 230 mm" },
+        { "label": "Gewicht", "value": "3,6 kg (Kreisel), 5,5 kg (Batterie)" }
+      ],
+      "advantagesHeading": "Vorteile",
+      "advantages": [
+        "eingebautes Fernrohr",
+        "Dämpfungssystem",
+        "Adapter für verschiedene Theodolite und Tachymeter",
+        "Fernbedienung",
+        "einfache Bedienung"
+      ],
+      "adaptersHeading": "Adapter",
+      "adaptersIntro": "Die GYROMAX™-Kreisel lassen sich mit verschiedenen Theodoliten und Tachymetern kombinieren. Für folgende Instrumente sind Adapter vorhanden:",
+      "adapters": [
+        { "brand": "Leica", "models": ["T16, T2", "T2002, T3000", "TC 1100", "TPS 300/400/700/800", "TPS 1200", "TS02/06/09/015"] },
+        { "brand": "Geomax", "models": ["ZTS 600"] },
+        { "brand": "Topcon", "models": ["GTS 700", "GTS 7500"] },
+        { "brand": "Trimble", "models": ["3603"] },
+        { "brand": "Zeiss", "models": ["S10, ELTA"] }
+      ],
+      "content": "GeoMessTechnik Heger entwickelt und produziert seit über 30 Jahren Vermessungskreisel für Tunnelvortriebe, Bergbau, Ausbildung und Militär. Wir sind auf Aufsatzkreisel spezialisiert, die mit fast allen Theodoliten und Tachymetern kombiniert werden können. Für spezielle Anwendungen entwerfen wir auch Adapter und Messwerkzeuge.",
+      "cta": "Wir beraten Sie gern zu unseren Vermessungskreiseln und dem GYROMAX™-Programm."
+    },
+    "repair": {
+      "title": "Reparatur",
+      "description": "Kalibrieren, Reparatur und Wartung von Vermessungskreiseln",
+      "paragraph1": "Zum unserem Service gehört das Kalibrieren von Vermessungskreiseln sowie die Reparatur und Wartung von Kreiselgeräten, z. B. Wild GAK.",
+      "paragraph2Start": "Wir sind ständig auf der Suche nach Wild-GAK-Kreiseln, auch defekte. Für Angebote und Anfragen senden Sie eine E-Mail an ",
+      "inquiryEmail": "gmt@hegeroptik.de",
+      "paragraph2End": " oder verwenden Sie unser ",
+      "contactFormLabel": "Kontaktformular",
+      "paragraph2AfterLink": ".",
+      "converterHeading": "WILD/Heerbrugg GAK Konverter",
+      "converterIntro": "Wir bieten gebrauchte WILD/Heerbrugg GAK Konverter an.",
+      "converterPrice": "Gebraucht, €500 (netto)",
+      "sidebarRepairHeading": "Reparatur",
+      "sidebarContactHeading": "Kontakt",
+      "sidebarPhoneLabel": "Telefon",
+      "sidebarEmailLabel": "E-Mail",
+      "sidebarEmail": "master@gmt-heger.com",
+      "content": "Wir kalibrieren, warten und reparieren Vermessungskreisel, z. B. Wild GAK. Des Weiteren kaufen wir Wild-GAK-Gyroskope, auch defekte."
+    },
+    "purchase": {
+      "title": "Ankauf von Vermessungsinstrumenten",
+      "description": "Wir kaufen neue, gebrauchte und historische Vermessungsausrüstung",
+      "content": "Wir kaufen ständig neue, gebrauchte und historische Vermessungsinstrumente sowie Zubehör und Literatur an. Kontaktieren Sie uns mit Details zu Ihrer Ausrüstung für eine faire Bewertung."
+    },
+    "contact": {
+      "title": "Kontakt",
+      "description": "Nehmen Sie Kontakt mit unserem Team auf",
+      "content": "Wir helfen Ihnen gerne bei allen Ihren Vermessungskreisel-Bedürfnissen. Erreichen Sie uns telefonisch oder per E-Mail.",
+      "form": {
+        "nameLabel": "Name",
+        "emailLabel": "E-Mail",
+        "messageLabel": "Nachricht",
+        "submitLabel": "Nachricht senden"
+      }
+    }
+  },
+  "en": {
+    "site": {
+      "name": "GeoMessTechnik Heger",
+      "description": "Professional surveying gyroscopes for tunnel construction, mining, training and military applications",
+      "phone": "+49 395 582 668 0",
+      "email": "info@gmt-heger.com"
+    },
+    "navigation": [
+      { "label": "Home", "href": "/" },
+      { "label": "Gyroscopes", "href": "/gyroscopes" },
+      { "label": "Repair", "href": "/repair" },
+      { "label": "Purchase", "href": "/purchase" },
+      { "label": "Contact", "href": "/contact" }
+    ],
+    "home": {
+      "hero": {
+        "title": "Surveying Gyroscopes",
+        "subtitle": "Precision Engineering for Over 30 Years",
+        "description": "GeoMessTechnik Heger develops and manufactures surveying gyroscopes for tunnel construction, mining, training, and military applications. We specialize in mounting gyroscopes that can be combined with almost all theodolites and tachymeters."
+      },
+      "sections": [
+        {
+          "id": "gyroscopes",
+          "title": "Surveying Gyroscopes",
+          "description": "We specialize in mounting gyroscopes that can be combined with almost all theodolites and tachymeters. For special applications, we also design adapters and measuring tools.",
+          "link": "/gyroscopes",
+          "linkText": "Learn More"
+        },
+        {
+          "id": "repair",
+          "title": "Repair & Calibration",
+          "description": "We calibrate, maintain and repair surveying gyroscopes, e.g. Wild GAK. We also purchase Wild-GAK gyroscopes, including defective ones.",
+          "link": "/repair",
+          "linkText": "Learn More"
+        },
+        {
+          "id": "purchase",
+          "title": "Purchase",
+          "description": "We constantly purchase new, used and historical surveying instruments as well as accessories and literature.",
+          "link": "/purchase",
+          "linkText": "Learn More"
+        }
+      ],
+      "featured": {
+        "title": "GYROMAX™ Surveying Gyroscope",
+        "subtitle": "GYROMAX™ AK-2M",
+        "description": "Our flagship precision instrument for professional surveying applications."
+      }
+    },
+    "gyroscopes": {
+      "title": "Surveying Gyroscopes",
+      "description": "Professional precision instruments for demanding applications",
+      "intro": "GeoMessTechnik Heger has been developing and producing surveying gyroscopes for tunnel construction, mining, training, and military applications for over 30 years.",
+      "sections": [
+        {
+          "heading": "Product Range",
+          "body": "We specialize in mounting gyroscopes that can be combined with almost all theodolites and tachymeters. For special applications we also design adapters and measuring tools. Our main product line is the GYROMAX™ series of surveying gyroscopes."
+        }
+      ],
+      "applicationsHeading": "Fields of Application",
+      "applications": [
+        "Education at universities and engineering schools",
+        "Direction controlling in tunneling",
+        "Mining",
+        "Fast orientation to true north"
+      ],
+      "gyromaxBody": "With GYROMAX™, true north can be fixed within 15 minutes. The calculation and tracking of true north can be performed in three different ways.\n\nThe supplied remote control enables control (damping, reversal points) of the GYROMAX™. Data transfer to computer or PDA is optionally via cable or Bluetooth® (IEEE 802.15.1).",
+      "techDataHeading": "Technical Data",
+      "techDataProduct": "GYROMAX™ AK-2M",
+      "techDataRows": [
+        { "label": "Accuracy", "value": "< 6 mgon (< 20″)" },
+        { "label": "Measurement time", "value": "approx. 15 min" },
+        { "label": "Power supply", "value": "24 V" },
+        { "label": "Size (transport case)", "value": "540 × 340 × 230 mm" },
+        { "label": "Weight", "value": "3.6 kg (gyro), 5.5 kg (battery)" }
+      ],
+      "advantagesHeading": "Advantages",
+      "advantages": [
+        "Built-in telescope",
+        "Damping system",
+        "Adapters for various theodolites and tachymeters",
+        "Remote control",
+        "Easy operation"
+      ],
+      "adaptersHeading": "Adapters",
+      "adaptersIntro": "The GYROMAX™ gyroscopes can be combined with various theodolites and tachymeters. Adapters are available for the following instruments:",
+      "adapters": [
+        { "brand": "Leica", "models": ["T16, T2", "T2002, T3000", "TC 1100", "TPS 300/400/700/800", "TPS 1200", "TS02/06/09/015"] },
+        { "brand": "Geomax", "models": ["ZTS 600"] },
+        { "brand": "Topcon", "models": ["GTS 700", "GTS 7500"] },
+        { "brand": "Trimble", "models": ["3603"] },
+        { "brand": "Zeiss", "models": ["S10, ELTA"] }
+      ],
+      "content": "GeoMessTechnik Heger develops and produces surveying gyroscopes for tunnel construction, mining, training and military applications. We are specialized in mounting gyroscopes that can be combined with almost all theodolites and tachymeters. For special applications, we also design adapters and measuring tools.",
+      "cta": "We are happy to advise you on our surveying gyroscopes and the GYROMAX™ range."
+    },
+    "repair": {
+      "title": "Repair",
+      "description": "Calibration, repair and maintenance of surveying gyroscopes",
+      "paragraph1": "Our service includes the calibration of surveying gyroscopes as well as the repair and maintenance of gyro instruments, e.g. Wild GAK.",
+      "paragraph2Start": "We are constantly looking for Wild GAK gyroscopes, including defective ones. For offers and inquiries please send an email to ",
+      "inquiryEmail": "gmt@hegeroptik.de",
+      "paragraph2End": " or use our ",
+      "contactFormLabel": "contact form",
+      "paragraph2AfterLink": ".",
+      "converterHeading": "WILD/Heerbrugg GAK Converter",
+      "converterIntro": "We offer used WILD/Heerbrugg GAK converters.",
+      "converterPrice": "Used, €500 (net)",
+      "sidebarRepairHeading": "Repair",
+      "sidebarContactHeading": "Contact",
+      "sidebarPhoneLabel": "Phone",
+      "sidebarEmailLabel": "Email",
+      "sidebarEmail": "master@gmt-heger.com",
+      "content": "We calibrate, maintain and repair surveying gyroscopes, e.g. Wild GAK. Furthermore, we purchase Wild-GAK gyroscopes, including defective ones."
+    },
+    "purchase": {
+      "title": "Purchase Surveying Instruments",
+      "description": "We buy new, used and historical surveying equipment",
+      "content": "We constantly purchase new, used and historical surveying instruments as well as accessories and literature. Contact us with details about your equipment for a fair evaluation."
+    },
+    "contact": {
+      "title": "Contact Us",
+      "description": "Get in touch with our team",
+      "content": "We're here to help with all your surveying gyroscope needs. Reach out to us via phone or email.",
+      "form": {
+        "nameLabel": "Name",
+        "emailLabel": "Email",
+        "messageLabel": "Message",
+        "submitLabel": "Send Message"
+      }
+    }
+  }
+}
