@@ -8,6 +8,12 @@ const nextConfig = {
   images: {
     unoptimized: true, // required for static export when hosting on GitHub Pages
   },
+  eslint: {
+    ignoreDuringBuilds: true, // no ESLint in project; remove when adding eslint
+  },
+  typescript: {
+    ignoreBuildErrors: false, // keep type-checking
+  },
 }
 
 module.exports = nextConfig

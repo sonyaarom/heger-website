@@ -177,7 +177,6 @@ export default function ContactPage() {
               
               {submitStatus === 'success' && (
                 <div className="p-4 border rounded-lg" style={{ 
-                  backgroundColor: 'var(--success)',
                   backgroundColor: 'rgba(34, 197, 94, 0.1)',
                   borderColor: 'var(--success)',
                   color: '#166534'
