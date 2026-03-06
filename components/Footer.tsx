@@ -50,8 +50,9 @@ export default function Footer() {
                 <span>{content.site.phone}</span>
               </a>
               <a
-                href={`mailto:${content.site.email}`}
+                href={content.site.email ? `mailto:${String(content.site.email).trim()}` : '#'}
                 className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors"
+                rel="noopener noreferrer"
               >
                 <Mail size={18} />
                 <span>{content.site.email}</span>
