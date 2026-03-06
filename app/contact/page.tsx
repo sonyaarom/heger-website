@@ -115,6 +115,8 @@ export default function ContactPage() {
                   className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:border-transparent transition-all"
                   style={{ 
                     borderColor: 'var(--gray-300)',
+                    backgroundColor: '#fff',
+                    color: 'var(--gray-900)',
                     '--tw-ring-color': 'var(--primary-500)'
                   } as React.CSSProperties}
                 />
@@ -133,6 +135,8 @@ export default function ContactPage() {
                   className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:border-transparent transition-all"
                   style={{ 
                     borderColor: 'var(--gray-300)',
+                    backgroundColor: '#fff',
+                    color: 'var(--gray-900)',
                     '--tw-ring-color': 'var(--primary-500)'
                   } as React.CSSProperties}
                 />
@@ -151,6 +155,8 @@ export default function ContactPage() {
                   className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:border-transparent transition-all resize-none"
                   style={{ 
                     borderColor: 'var(--gray-300)',
+                    backgroundColor: '#fff',
+                    color: 'var(--gray-900)',
                     '--tw-ring-color': 'var(--primary-500)'
                   } as React.CSSProperties}
                 />
