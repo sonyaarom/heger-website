@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter, Syne } from 'next/font/google'
 import './globals.css'
-import Navigation from '@/components/Navigation'
-import Footer from '@/components/Footer'
+import ConceptSwitcherGate from '@/components/concepts/ConceptSwitcherGate'
 
 const inter = Inter({ subsets: ['latin'] })
 const syne = Syne({ subsets: ['latin'], variable: '--font-syne' })
@@ -62,9 +61,8 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.className} ${syne.variable}`}>
-        <Navigation />
-        <main className="min-h-screen">{children}</main>
-        <Footer />
+        {children}
+        <ConceptSwitcherGate />
       </body>
     </html>
   )
