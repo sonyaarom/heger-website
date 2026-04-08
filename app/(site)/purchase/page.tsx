@@ -3,7 +3,6 @@
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { getContent } from '@/lib/i18n'
-import reifeFrauen from '@/components/pics/reife-frauen.jpg'
 
 export default function PurchasePage() {
   const [content, setContent] = useState(() => getContent('de'))
@@ -22,19 +21,10 @@ export default function PurchasePage() {
           {content.purchase.description}
         </p>
         <div className="flex justify-center my-12">
-          <Image
-            src={reifeFrauen}
-            alt="Reife Frauen"
-            className="rounded-lg shadow-md max-w-md w-full h-auto object-cover"
-            priority
-          />
+          <p>placeholder Text oder Bild</p>
         </div>
-        <div className="prose prose-lg max-w-none">
-          <p className="leading-relaxed whitespace-pre-line" style={{ color: 'var(--gray-700)' }}>
-            {content.purchase.content}
-          </p>
-        </div>
+        <p>{content.purchase.content}</p>
       </div>
     </div>
-  )
+  );
 }
