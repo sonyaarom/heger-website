@@ -1,265 +1,475 @@
 {
   "de": {
     "site": {
-      "name": "GeoMessTechnik Heger",
-      "description": "Vermessungskreisel für Tunnelvortriebe, Bergbau, Ausbildung und Militär",
+      "name": "GMT Heger",
+      "fullName": "GMT GeoMessTechnik Heger - Dr.-Ing. Wilhelm Heger",
+      "description": "North-Seeking Gyroscopes für Tunnelbau, Bergbau und Ausbildung",
       "phone": "+49 395 582 668 0",
-      "email": "info@gmt-heger.com"
+      "email": "info@gmt-heger.com",
+      "address": "Mühlenstraße 9, 17039 Wulkenzin, Deutschland"
     },
     "navigation": [
       { "label": "Startseite", "href": "/" },
-      { "label": "Kreisel", "href": "/gyroscopes" },
-      { "label": "Reparatur", "href": "/repair" },
-      { "label": "Ankauf", "href": "/purchase" },
+      { "label": "Produkte", "href": "/gyroscopes" },
+      { "label": "Service", "href": "/service" },
+      { "label": "Historie", "href": "/history" },
       { "label": "Kontakt", "href": "/contact" }
     ],
+    "enquireCta": "Anfrage",
     "home": {
-      "hero": {
-        "title": "Vermessungskreisel",
-        "subtitle": "Präzisionstechnik seit über 30 Jahren",
-        "description": "GeoMessTechnik Heger entwickelt und produziert seit über 30 Jahren Vermessungskreisel für Tunnelvortriebe, Bergbau, Ausbildung und Militär. Wir sind auf Aufsatzkreisel spezialisiert, die mit fast allen Theodoliten und Tachymetern kombiniert werden können."
+      "eyebrow": "Präzisionsinstrumente",
+      "heroTitle": "North-Seeking\nGyroscopes",
+      "heroSubtitle": "Präzisionstechnik seit über 30 Jahren",
+      "heroDesc": "GeoMessTechnik Heger entwickelt und produziert North-Seeking Gyroscopes für Tunnelvortriebe, Bergbau und Hochschulausbildung. Spezialisiert auf Aufsatzkreisel für alle gängigen Theodolite und Tachymeter.",
+      "heroCta1": "Zu den Produkten",
+      "heroCta2": "Kontakt aufnehmen",
+      "kpiLabels": {
+        "accuracy": "Genauigkeit",
+        "time": "Messdauer",
+        "experience": "Jahre Erfahrung",
+        "brands": "Kompatible Marken"
       },
-      "sections": [
-        {
-          "id": "gyroscopes",
-          "title": "Vermessungskreisel",
-          "description": "Wir sind auf Aufsatzkreisel spezialisiert, die mit fast allen Theodoliten und Tachymetern kombiniert werden können. Für spezielle Anwendungen entwerfen wir auch Adapter und Messwerkzeuge.",
-          "link": "/gyroscopes",
-          "linkText": "Lesen Sie mehr"
-        },
-        {
-          "id": "repair",
-          "title": "Reparatur",
-          "description": "Wir kalibrieren, warten und reparieren Vermessungskreisel, z. B. Wild GAK. Des Weiteren kaufen wir Wild-GAK-Gyroskope, auch defekte.",
-          "link": "/repair",
-          "linkText": "Lesen Sie mehr"
-        },
-        {
-          "id": "purchase",
-          "title": "Ankauf",
-          "description": "Wir kaufen ständig neue, gebrauchte und historische Vermessungsinstrumente sowie Zubehör und Literatur an.",
-          "link": "/purchase",
-          "linkText": "Lesen Sie mehr"
-        }
+      "offerEyebrow": "Was wir bieten",
+      "sectionsTitle": "Unsere Leistungen",
+      "boxes": [
+        { "title": "North-Seeking Gyroscopes", "desc": "Präzise Aufsatzkreisel kompatibel mit fast allen Theodoliten und Tachymetern. Schnelle geographische Nord-Fixierung in unter 15 Minuten.", "link": "/gyroscopes", "cta": "Produkte ansehen" },
+        { "title": "Service & Kalibrierung", "desc": "Kalibrierung, Reparatur und Wartung von Vermessungskreiseln. Professioneller Vor-Ort-Service und Schulungen durch erfahrene Ingenieure.", "link": "/service", "cta": "Service ansehen" },
+        { "title": "Ankauf", "desc": "Wir kaufen ständig neue, gebrauchte und historische Vermessungsinstrumente sowie Zubehör und Literatur an.", "link": "/contact", "cta": "Ankauf anfragen" }
       ],
-      "featured": {
-        "title": "GYROMAX™-Vermessungskreisel",
-        "subtitle": "GYROMAX™ AK-2M",
-        "description": "Unser Flaggschiff-Präzisionsinstrument für professionelle Vermessungsanwendungen."
-      }
-    },
-    "gyroscopes": {
-      "title": "Vermessungskreisel",
-      "description": "Professionelle Präzisionsinstrumente für anspruchsvolle Anwendungen",
-      "intro": "GeoMessTechnik Heger entwickelt und produziert seit über 30 Jahren Vermessungskreisel für Tunnelvortriebe, Bergbau, Ausbildung und Militär.",
-      "sections": [
-        {
-          "heading": "Produktspektrum",
-          "body": "Wir sind auf Aufsatzkreisel spezialisiert, die mit fast allen Theodoliten und Tachymetern kombiniert werden können. Für spezielle Anwendungen entwerfen wir auch Adapter und Messwerkzeuge. Unser Hauptprodukt ist die GYROMAX™-Reihe von Vermessungskreiseln."
-        }
-      ],
-      "applicationsHeading": "Anwendungsgebiete",
-      "applications": [
-        "Ausbildung an Hochschulen und Universitäten",
-        "Richtungskontrolle im Tunnelbau",
-        "Bergbau",
-        "Schnelle Orientierung zu geographisch Nord"
-      ],
-      "gyromaxBody": "Mit GYROMAX™ kann geographisch Nord innerhalb von 15 Minuten fixiert werden. Die Berechnung und Verfolgung von geographisch Nord kann auf drei verschiedene Arten erfolgen.\n\nDie mitgelieferte Fernbedienung ermöglicht die Steuerung (Dämpfung, Umkehrpunkte) des GYROMAX™. Die Datenübertragung zum Computer oder PDA erfolgt wahlweise per Kabel oder Bluetooth® (IEEE 802.15.1).",
-      "techDataHeading": "Technische Daten",
-      "techDataProduct": "GYROMAX™ AK-2M",
-      "techDataRows": [
+      "gyromaxTitle": "GYROMAX™ North-Seeking Gyroscopes",
+      "gyromaxSubtitle": "Flaggschiff-Instrument für professionelle Anwendungen",
+      "gyromaxDesc": "Mit GYROMAX™ kann geographisch Nord innerhalb von 15 Minuten fixiert werden. Die Berechnung und Verfolgung erfolgt auf drei verschiedene Arten. Fernbedienung, Bluetooth®-Datenübertragung und einfachste Bedienung zeichnen das System aus.",
+      "techRows": [
         { "label": "Genauigkeit", "value": "< 6 mgon (< 20″)" },
         { "label": "Messdauer", "value": "ca. 15 min" },
         { "label": "Stromversorgung", "value": "24 V" },
-        { "label": "Größe (Transportkoffer)", "value": "540 × 340 × 230 mm" },
-        { "label": "Gewicht", "value": "3,6 kg (Kreisel), 5,5 kg (Batterie)" }
+        { "label": "Gewicht", "value": "3,6 kg (Kreisel)" }
       ],
+      "techCta": "Technische Daten ansehen",
+      "quoteCta": "Anfrage stellen",
+      "applicationsEyebrow": "Anwendungsgebiete"
+    },
+    "gyroscopes": {
+      "title": "North-Seeking Gyroscopes",
+      "intro": "GeoMessTechnik Heger entwickelt und produziert seit über 30 Jahren North-Seeking Gyroscopes für Tunnelvortriebe, Bergbau und Hochschulausbildung. Wir sind auf Aufsatzkreisel spezialisiert, die mit fast allen Theodoliten und Tachymetern kombiniert werden können.",
+      "productsTitle": "Unsere Produkte",
+      "productBadge": "Produkt",
+      "viewDetails": "Details ansehen",
+      "enquire": "Anfragen",
+      "requestQuote": "Angebot anfragen",
+      "backAll": "Alle Produkte",
+      "technicalData": "Technische Daten",
       "advantagesHeading": "Vorteile",
-      "advantages": [
-        "eingebautes Fernrohr",
-        "Dämpfungssystem",
-        "Adapter für verschiedene Theodolite und Tachymeter",
-        "Fernbedienung",
-        "einfache Bedienung"
+      "compatibleHeading": "Kompatible Instrumente",
+      "otherProducts": "Weitere Produkte",
+      "video3dHeading": "3D-Video",
+      "products": [
+        {
+          "id": "ak2m",
+          "name": "GYROMAX™ AK-2M",
+          "tagline": "Flaggschiff-Kreisel für professionelle Anwendungen",
+          "img": "/pics/kreisel_1.jpg",
+          "images": ["/pics/kreisel_1.jpg", "/pics/kreisel_2.jpg", "/pics/kreisel_3.jpg"],
+          "desc": "Unser meistverkauftes Instrument für professionelle North-Seeking-Anwendungen. Hohe Genauigkeit, robuste Konstruktion und einfache Bedienung.",
+          "techRows": [
+            { "label": "Messung", "value": "Manuell" },
+            { "label": "Sazi", "value": "< 6 mgon = 20 arcsec" },
+            { "label": "RCU", "value": "für Dämpfung der Schwingung" },
+            { "label": "Fernrohr", "value": "Fix-Fokus; 10×, V ± 20 gon" },
+            { "label": "Dmin", "value": "ca. 30 m" },
+            { "label": "Messdauer", "value": "ca. 15 min" },
+            { "label": "Stromversorgung", "value": "24 V" },
+            { "label": "Größe (Koffer)", "value": "540 × 340 × 230 mm" },
+            { "label": "Gewicht", "value": "3,6 kg (Kreisel), 5,5 kg (Batterie)" }
+          ],
+          "advantages": ["Eingebautes Fernrohr", "Dämpfungssystem", "Adapter für verschiedene Theodolite und Tachymeter", "Bluetooth® Datenübertragung", "Fernbedienung", "Einfache Bedienung"],
+          "adapters": [
+            { "brand": "Leica", "models": ["T16, T2", "T2002, T3000", "TC 1100", "TPS 300/400/700/800", "TPS 1200", "TS02/06/09/015"] },
+            { "brand": "Geomax", "models": ["ZTS 600"] },
+            { "brand": "Topcon", "models": ["GTS 700", "GTS 7500"] },
+            { "brand": "Trimble", "models": ["3603"] },
+            { "brand": "Zeiss", "models": ["S10, ELTA"] }
+          ]
+        },
+        {
+          "id": "ak2mnt",
+          "name": "GYROMAX™ AK-2M nT",
+          "tagline": "Manuelle Messung mit RCU und Autokollimations-Adaption",
+          "img": "/pics/kreisel_3.jpg",
+          "images": ["/pics/kreisel_3.jpg", "/pics/kreisel_1.jpg", "/pics/kreisel_2.jpg"],
+          "desc": "Ausführung der AK-2M-Plattform für professionelle North-Seeking-Anwendungen: manuelle Messung, RCU zur Schwingungsdämpfung und mechanische Adaption für die Autokollimation.",
+          "techRows": [
+            { "label": "Messung", "value": "Manuell" },
+            { "label": "Sazi", "value": "< 6 mgon = 20 arcsec" },
+            { "label": "RCU", "value": "für Dämpfung der Schwingung" },
+            { "label": "Mechanische Adaption", "value": "Kann für Autokollimation genutzt werden" }
+          ],
+          "advantages": ["Manuelle Messung", "RCU für Dämpfung der Schwingung", "Mechanische Adaption für Autokollimation", "Hohe Richtungsgenauigkeit (Sazi)"],
+          "adapters": [
+            { "brand": "Leica", "models": ["T16, T2", "T2002, T3000", "TC 1100", "TPS 300/400/700/800", "TPS 1200", "TS02/06/09/015"] },
+            { "brand": "Geomax", "models": ["ZTS 600"] },
+            { "brand": "Topcon", "models": ["GTS 700", "GTS 7500"] },
+            { "brand": "Trimble", "models": ["3603"] },
+            { "brand": "Zeiss", "models": ["S10, ELTA"] }
+          ]
+        },
+        {
+          "id": "a300",
+          "name": "GYROMAX™ A 300",
+          "tagline": "Vollautomatische Vororientierung mit Smartphone-Bedienung",
+          "video": "/vids/A300_TS15_5.mp4",
+          "img": "/pics/kreisel_2.jpg",
+          "images": ["/pics/kreisel_2.jpg", "/pics/kreisel_1.jpg", "/pics/kreisel_3.jpg"],
+          "desc": "Präzisionskreisel mit manueller Messung, vollautomatischer Vororientierung und Messung sowie intuitiver Smartphone-Bedienung. Mechanische Adaption für den Einsatz in der Autokollimation.",
+          "techRows": [
+            { "label": "Messung", "value": "Manuell" },
+            { "label": "Sazi", "value": "typisch < 5 mgon = 16 arcsec" },
+            { "label": "Intern", "value": "< 2 mgon = 6 arcsec" },
+            { "label": "Automatik", "value": "Vollautomatische Vororientierung & Messung" },
+            { "label": "Bedienung", "value": "Smartphone" },
+            { "label": "Mechanische Adaption", "value": "Kann für Autokollimation genutzt werden" }
+          ],
+          "advantages": ["Manuelle Messung", "Vollautomatische Vororientierung & Messung", "Smartphone-Bedienung", "Mechanische Adaption für Autokollimation", "Hohe Genauigkeit (Sazi / intern)"],
+          "adapters": [
+            { "brand": "Leica", "models": ["T16, T2", "T2002, T3000", "TC 1100", "TPS 300/400/700/800", "TPS 1200", "TS02/06/09/015"] },
+            { "brand": "Geomax", "models": ["ZTS 600"] },
+            { "brand": "Topcon", "models": ["GTS 700", "GTS 7500"] },
+            { "brand": "Trimble", "models": ["3603"] },
+            { "brand": "Zeiss", "models": ["S10, ELTA"] }
+          ]
+        },
+        {
+          "id": "gak",
+          "name": "WILD/Heerbrugg GAK",
+          "tagline": "Bewährtes System – Service & Konverter",
+          "img": "/pics/konverter_1.jpg",
+          "images": ["/pics/konverter_1.jpg", "/pics/konverter_2.jpg", "/pics/konverter_3.jpg"],
+          "desc": "Wir servicieren, kalibrieren und liefern Konverter für das bewährte WILD/Heerbrugg GAK-System. Gebrauchte Konverter verfügbar.",
+          "techRows": [
+            { "label": "Typ", "value": "WILD/Heerbrugg GAK" },
+            { "label": "Konverter-Preis", "value": "€ 500 (netto, gebraucht)" },
+            { "label": "Service", "value": "Kalibrierung & Reparatur" }
+          ],
+          "advantages": ["Bewährte Technologie", "Ersatzteile verfügbar", "Kalibrierservice", "Konverter auf Lager"],
+          "adapters": []
+        }
       ],
-      "adaptersHeading": "Adapter",
-      "adaptersIntro": "Die GYROMAX™-Kreisel lassen sich mit verschiedenen Theodoliten und Tachymetern kombinieren. Für folgende Instrumente sind Adapter vorhanden:",
-      "adapters": [
-        { "brand": "Leica", "models": ["T16, T2", "T2002, T3000", "TC 1100", "TPS 300/400/700/800", "TPS 1200", "TS02/06/09/015"] },
-        { "brand": "Geomax", "models": ["ZTS 600"] },
-        { "brand": "Topcon", "models": ["GTS 700", "GTS 7500"] },
-        { "brand": "Trimble", "models": ["3603"] },
-        { "brand": "Zeiss", "models": ["S10, ELTA"] }
+      "applicationTitle": "Anwendungsgebiete",
+      "applications": ["Richtungskontrolle im Tunnelbau", "Bergbau", "Ausbildung", "Schnelle Orientierung zu geographisch Nord"]
+    },
+    "service": {
+      "title": "Service",
+      "intro": "Wir bieten umfassende Serviceleistungen rund um North-Seeking Gyroscopes und Präzisionsmessinstrumente.",
+      "requestCta": "Anfrage stellen",
+      "items": [
+        { "id": "calibration", "title": "Kalibrierung", "desc": "Professionelle Kalibrierung Ihrer Vermessungskreisel nach Herstellerstandards. Kalibrierungszertifikat inklusive. Schnelle Bearbeitungszeiten.", "image": "/pics/konverter_2.jpg" },
+        { "id": "repair", "title": "Reparatur", "desc": "Reparatur und Wartung von Vermessungskreiseln aller Fabrikate, insbesondere GYROMAX™ und WILD GAK. Wir kaufen auch defekte Geräte an.", "image": "/pics/konverter_3.jpg" },
+        { "id": "training", "title": "Schulung & Training", "desc": "Praxisnahe Schulungen für Bediener und Techniker. Einzel- und Gruppentraining. Vor-Ort-Schulung oder in unserem Haus.", "image": "/pics/kreisel_2.jpg" }
       ],
-      "content": "GeoMessTechnik Heger entwickelt und produziert seit über 30 Jahren Vermessungskreisel für Tunnelvortriebe, Bergbau, Ausbildung und Militär. Wir sind auf Aufsatzkreisel spezialisiert, die mit fast allen Theodoliten und Tachymetern kombiniert werden können. Für spezielle Anwendungen entwerfen wir auch Adapter und Messwerkzeuge.",
-      "cta": "Wir beraten Sie gern zu unseren Vermessungskreiseln und dem GYROMAX™-Programm."
+      "gakEyebrow": "Ankauf & Service",
+      "gakHeading": "WILD/Heerbrugg GAK",
+      "gakIntro": "Wir kalibrieren, warten und reparieren Vermessungskreisel, insbesondere WILD GAK. Wir kaufen auch defekte Geräte an.",
+      "gakPrice": "Gebrauchte WILD/Heerbrugg GAK Konverter verfügbar – € 500 (netto).",
+      "gakEmail": "gmt@hegeroptik.de",
+      "gakContactCta": "Kontaktformular"
     },
-    "repair": {
-      "title": "Reparatur",
-      "description": "Kalibrieren, Reparatur und Wartung von Vermessungskreiseln",
-      "paragraph1": "Zum unserem Service gehört das Kalibrieren von Vermessungskreiseln sowie die Reparatur und Wartung von Kreiselgeräten, z. B. Wild GAK.",
-      "paragraph2Start": "Wir sind ständig auf der Suche nach Wild-GAK-Kreiseln, auch defekte. Für Angebote und Anfragen senden Sie eine E-Mail an ",
-      "inquiryEmail": "gmt@hegeroptik.de",
-      "paragraph2End": " oder verwenden Sie unser ",
-      "contactFormLabel": "Kontaktformular",
-      "paragraph2AfterLink": ".",
-      "converterHeading": "WILD/Heerbrugg GAK Konverter",
-      "converterIntro": "Wir bieten gebrauchte WILD/Heerbrugg GAK Konverter an.",
-      "converterPrice": "Gebraucht, €500 (netto)",
-      "sidebarRepairHeading": "Reparatur",
-      "sidebarContactHeading": "Kontakt",
-      "sidebarPhoneLabel": "Telefon",
-      "sidebarEmailLabel": "E-Mail",
-      "sidebarEmail": "master@gmt-heger.com",
-      "content": "Wir kalibrieren, warten und reparieren Vermessungskreisel, z. B. Wild GAK. Des Weiteren kaufen wir Wild-GAK-Gyroskope, auch defekte."
-    },
-    "purchase": {
-      "title": "Ankauf von Vermessungsinstrumenten",
-      "description": "Wir kaufen neue, gebrauchte und historische Vermessungsausrüstung",
-      "content": "Wir kaufen ständig neue, gebrauchte und historische Vermessungsinstrumente sowie Zubehör und Literatur an. Kontaktieren Sie uns mit Details zu Ihrer Ausrüstung für eine faire Bewertung."
+    "history": {
+      "title": "Historie",
+      "intro": "GeoMessTechnik Heger blickt auf eine über 30-jährige Geschichte in der Entwicklung und Fertigung von Präzisionsmessinstrumenten zurück.",
+      "eyebrow": "Über uns",
+      "heading": "GeoMessTechnik Heger",
+      "content": "GeoMessTechnik Heger wurde gegründet mit dem Ziel, hochpräzise North-Seeking Gyroscopes für industrielle und wissenschaftliche Anwendungen zu entwickeln. Über die Jahrzehnte haben wir uns zum Spezialisten für Aufsatzkreisel entwickelt, die mit fast allen gängigen Theodoliten und Tachymetern kompatibel sind.\n\nUnser GYROMAX™-System setzt seit Jahren Maßstäbe in puncto Genauigkeit, Zuverlässigkeit und Bedienkomfort. Mit kontinuierlicher Weiterentwicklung bleiben wir an der Spitze der Messtechnik.\n\nInhalte werden von GMT Heger ergänzt.",
+      "milestonesHeading": "Meilensteine",
+      "milestones": [
+        { "year": "1990er", "label": "Gründung GeoMessTechnik Heger" },
+        { "year": "2000er", "label": "Entwicklung GYROMAX™-Produktlinie" },
+        { "year": "2010er", "label": "Bluetooth®-Integration & Fernsteuerung" },
+        { "year": "Heute", "label": "Über 30 Jahre Präzisionstechnik" }
+      ],
+      "contactCta": "Kontakt aufnehmen",
+      "bannerTitle": "30+ Jahre Präzisionstechnik"
     },
     "contact": {
       "title": "Kontakt",
-      "description": "Nehmen Sie Kontakt mit unserem Team auf",
-      "content": "Wir helfen Ihnen gerne bei allen Ihren Vermessungskreisel-Bedürfnissen. Erreichen Sie uns telefonisch oder per E-Mail.",
+      "intro": "Wir helfen Ihnen gerne bei allen Fragen zu unseren North-Seeking Gyroscopes und Dienstleistungen. Nehmen Sie Kontakt auf.",
+      "directContact": "Direkter Kontakt",
+      "contactForm": "Kontaktformular",
+      "distributorTitle": "Distributor werden",
+      "distributorNote": "Weitere Distributoren willkommen – bitte kontaktieren Sie uns.",
+      "labels": {
+        "phone": "Telefon",
+        "email": "E-Mail",
+        "address": "Adresse"
+      },
       "form": {
-        "nameLabel": "Name",
-        "emailLabel": "E-Mail",
-        "messageLabel": "Nachricht",
-        "submitLabel": "Nachricht senden"
+        "name": "Name *",
+        "company": "Unternehmen",
+        "email": "E-Mail *",
+        "phone": "Telefon",
+        "product": "Interesse an Produkt",
+        "message": "Nachricht *",
+        "distributor": "Ich bin an einer Distributor-Partnerschaft interessiert",
+        "submit": "Nachricht senden",
+        "success": "Vielen Dank! Wir melden uns in Kürze.",
+        "successMsg": "Wir werden Sie unter der angegebenen E-Mail-Adresse kontaktieren.",
+        "close": "Schließen"
+      }
+    },
+    "inline": {
+      "eyebrow": "Schreiben Sie uns",
+      "heading": "Haben Sie Fragen?"
+    },
+    "footer": {
+      "ctaHeading": "Nehmen Sie Kontakt auf",
+      "ctaSub": "Wir beraten Sie gerne zu unseren Produkten und Dienstleistungen.",
+      "tagline": "Entwicklung, Fertigung und Service von North-Seeking Gyroscopes seit über 30 Jahren.",
+      "quicklinks": "Schnellzugriff",
+      "contactHead": "Kontakt",
+      "addressHead": "Adresse",
+      "addressLines": ["GeoMessTechnik Heger", "Mühlenstraße 9", "17039 Wulkenzin", "Deutschland"],
+      "legal": "Impressum",
+      "privacy": "Datenschutz",
+      "rights": "Alle Rechte vorbehalten.",
+      "imprint": {
+        "title": "Impressum",
+        "content": "GeoMessTechnik Heger\nMühlenstraße 9\n17039 Wulkenzin\nDeutschland\n\nTelefon: +49 395 582 668 0\nE-Mail: info@gmt-heger.com\n\nVerantwortlich für den Inhalt:\nGMT Heger\n\nHaftungsausschluss: Die Inhalte dieser Website wurden mit größtmöglicher Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte übernehmen wir keine Gewähr."
       }
     }
   },
   "en": {
     "site": {
-      "name": "GeoMessTechnik Heger",
-      "description": "Professional surveying gyroscopes for tunnel construction, mining, training and military applications",
+      "name": "GMT Heger",
+      "fullName": "GeoMessTechnik Heger",
+      "description": "North-Seeking Gyroscopes for tunnel construction, mining and university training",
       "phone": "+49 395 582 668 0",
-      "email": "info@gmt-heger.com"
+      "email": "info@gmt-heger.com",
+      "address": "Mühlenstraße 9, 17039 Wulkenzin, Germany"
     },
     "navigation": [
       { "label": "Home", "href": "/" },
-      { "label": "Gyroscopes", "href": "/gyroscopes" },
-      { "label": "Repair", "href": "/repair" },
-      { "label": "Purchase", "href": "/purchase" },
+      { "label": "Products", "href": "/gyroscopes" },
+      { "label": "Service", "href": "/service" },
+      { "label": "History", "href": "/history" },
       { "label": "Contact", "href": "/contact" }
     ],
+    "enquireCta": "Enquire",
     "home": {
-      "hero": {
-        "title": "Surveying Gyroscopes",
-        "subtitle": "Precision Engineering for Over 30 Years",
-        "description": "GeoMessTechnik Heger develops and manufactures surveying gyroscopes for tunnel construction, mining, training, and military applications. We specialize in mounting gyroscopes that can be combined with almost all theodolites and tachymeters."
+      "eyebrow": "Precision Instruments",
+      "heroTitle": "North-Seeking\nGyroscopes",
+      "heroSubtitle": "Precision Engineering for Over 30 Years",
+      "heroDesc": "GeoMessTechnik Heger develops and manufactures North-Seeking Gyroscopes for tunnel construction, mining and university training. Specialised in mounting gyroscopes compatible with virtually all theodolites and total stations.",
+      "heroCta1": "View Products",
+      "heroCta2": "Get in Touch",
+      "kpiLabels": {
+        "accuracy": "Accuracy",
+        "time": "Measurement Time",
+        "experience": "Years Experience",
+        "brands": "Compatible Brands"
       },
-      "sections": [
-        {
-          "id": "gyroscopes",
-          "title": "Surveying Gyroscopes",
-          "description": "We specialize in mounting gyroscopes that can be combined with almost all theodolites and tachymeters. For special applications, we also design adapters and measuring tools.",
-          "link": "/gyroscopes",
-          "linkText": "Learn More"
-        },
-        {
-          "id": "repair",
-          "title": "Repair & Calibration",
-          "description": "We calibrate, maintain and repair surveying gyroscopes, e.g. Wild GAK. We also purchase Wild-GAK gyroscopes, including defective ones.",
-          "link": "/repair",
-          "linkText": "Learn More"
-        },
-        {
-          "id": "purchase",
-          "title": "Purchase",
-          "description": "We constantly purchase new, used and historical surveying instruments as well as accessories and literature.",
-          "link": "/purchase",
-          "linkText": "Learn More"
-        }
+      "offerEyebrow": "What we offer",
+      "sectionsTitle": "Our Services",
+      "boxes": [
+        { "title": "North-Seeking Gyroscopes", "desc": "Precision mounting gyroscopes compatible with almost all theodolites and total stations. True north determination in under 15 minutes.", "link": "/gyroscopes", "cta": "View Products" },
+        { "title": "Service & Calibration", "desc": "Calibration, repair and maintenance of surveying gyroscopes. Professional on-site service and training by experienced engineers.", "link": "/service", "cta": "View Services" },
+        { "title": "Purchase", "desc": "We are always buying new, used and surveying instruments, and literature.", "link": "/contact", "cta": "Purchase" }
       ],
-      "featured": {
-        "title": "GYROMAX™ Surveying Gyroscope",
-        "subtitle": "GYROMAX™ AK-2M",
-        "description": "Our flagship precision instrument for professional surveying applications."
-      }
-    },
-    "gyroscopes": {
-      "title": "Surveying Gyroscopes",
-      "description": "Professional precision instruments for demanding applications",
-      "intro": "GeoMessTechnik Heger has been developing and producing surveying gyroscopes for tunnel construction, mining, training, and military applications for over 30 years.",
-      "sections": [
-        {
-          "heading": "Product Range",
-          "body": "We specialize in mounting gyroscopes that can be combined with almost all theodolites and tachymeters. For special applications we also design adapters and measuring tools. Our main product line is the GYROMAX™ series of surveying gyroscopes."
-        }
-      ],
-      "applicationsHeading": "Fields of Application",
-      "applications": [
-        "Education at universities and engineering schools",
-        "Direction controlling in tunneling",
-        "Mining",
-        "Fast orientation to true north"
-      ],
-      "gyromaxBody": "With GYROMAX™, true north can be fixed within 15 minutes. The calculation and tracking of true north can be performed in three different ways.\n\nThe supplied remote control enables control (damping, reversal points) of the GYROMAX™. Data transfer to computer or PDA is optionally via cable or Bluetooth® (IEEE 802.15.1).",
-      "techDataHeading": "Technical Data",
-      "techDataProduct": "GYROMAX™ AK-2M",
-      "techDataRows": [
+      "gyromaxTitle": "GYROMAX™ North-Seeking Gyroscopes",
+      "gyromaxSubtitle": "Flagship instrument for professional applications",
+      "gyromaxDesc": "With GYROMAX™, true north can be fixed within 15 minutes. Calculation and tracking can be performed in three different ways. Remote control, Bluetooth® data transfer and simple operation are the hallmarks of this system.",
+      "techRows": [
         { "label": "Accuracy", "value": "< 6 mgon (< 20″)" },
         { "label": "Measurement time", "value": "approx. 15 min" },
         { "label": "Power supply", "value": "24 V" },
-        { "label": "Size (transport case)", "value": "540 × 340 × 230 mm" },
-        { "label": "Weight", "value": "3.6 kg (gyro), 5.5 kg (battery)" }
+        { "label": "Weight", "value": "3.6 kg (gyro)" }
       ],
+      "techCta": "View Technical Data",
+      "quoteCta": "Request a Quote",
+      "applicationsEyebrow": "Fields of Application"
+    },
+    "gyroscopes": {
+      "title": "North-Seeking Gyroscopes",
+      "intro": "GeoMessTechnik Heger has been developing and producing North-Seeking Gyroscopes for tunnel construction, mining and university training for over 30 years. We specialise in mounting gyroscopes compatible with virtually all theodolites and total stations.",
+      "productsTitle": "Our Products",
+      "productBadge": "Product",
+      "viewDetails": "View Details",
+      "enquire": "Enquire",
+      "requestQuote": "Request Quote",
+      "backAll": "All Products",
+      "technicalData": "Technical Data",
       "advantagesHeading": "Advantages",
-      "advantages": [
-        "Built-in telescope",
-        "Damping system",
-        "Adapters for various theodolites and tachymeters",
-        "Remote control",
-        "Easy operation"
+      "compatibleHeading": "Compatible Instruments",
+      "otherProducts": "Other Products",
+      "video3dHeading": "3D video",
+      "products": [
+        {
+          "id": "ak2m",
+          "name": "GYROMAX™ AK-2M",
+          "tagline": "Flagship gyroscope for professional applications",
+          "img": "/pics/kreisel_1.jpg",
+          "images": ["/pics/kreisel_1.jpg", "/pics/kreisel_2.jpg", "/pics/kreisel_3.jpg"],
+          "desc": "Our best-selling instrument for professional North-Seeking applications. High accuracy, robust construction and easy operation.",
+          "techRows": [
+            { "label": "Measurement", "value": "Manual" },
+            { "label": "Sazi", "value": "< 6 mgon = 20 arcsec" },
+            { "label": "RCU", "value": "for vibration damping" },
+            { "label": "Telescope", "value": "fixed focus; 10×, V ± 20 gon" },
+            { "label": "Dmin", "value": "approx. 30 m" },
+            { "label": "Measurement time", "value": "approx. 15 min" },
+            { "label": "Power supply", "value": "24 V" },
+            { "label": "Size (case)", "value": "540 × 340 × 230 mm" },
+            { "label": "Weight", "value": "3.6 kg (gyro), 5.5 kg (battery)" }
+          ],
+          "advantages": ["Built-in telescope", "Damping system", "Adapters for various theodolites and total stations", "Bluetooth® data transfer", "Remote control", "Simple operation"],
+          "adapters": [
+            { "brand": "Leica", "models": ["T16, T2", "T2002, T3000", "TC 1100", "TPS 300/400/700/800", "TPS 1200", "TS02/06/09/015"] },
+            { "brand": "Geomax", "models": ["ZTS 600"] },
+            { "brand": "Topcon", "models": ["GTS 700", "GTS 7500"] },
+            { "brand": "Trimble", "models": ["3603"] },
+            { "brand": "Zeiss", "models": ["S10, ELTA"] }
+          ]
+        },
+        {
+          "id": "ak2mnt",
+          "name": "GYROMAX™ AK-2M nT",
+          "tagline": "Manual measurement with RCU and autocollimation adaptation",
+          "img": "/pics/kreisel_3.jpg",
+          "images": ["/pics/kreisel_3.jpg", "/pics/kreisel_1.jpg", "/pics/kreisel_2.jpg"],
+          "desc": "AK-2M platform configuration for professional North-Seeking: manual measurement, RCU for vibration damping, and mechanical adaptation for autocollimation.",
+          "techRows": [
+            { "label": "Measurement", "value": "Manual" },
+            { "label": "Sazi", "value": "< 6 mgon = 20 arcsec" },
+            { "label": "RCU", "value": "for vibration damping" },
+            { "label": "Mechanical adaptation", "value": "Can be used for autocollimation" }
+          ],
+          "advantages": ["Manual measurement", "RCU for vibration damping", "Mechanical adaptation for autocollimation", "High directional accuracy (Sazi)"],
+          "adapters": [
+            { "brand": "Leica", "models": ["T16, T2", "T2002, T3000", "TC 1100", "TPS 300/400/700/800", "TPS 1200", "TS02/06/09/015"] },
+            { "brand": "Geomax", "models": ["ZTS 600"] },
+            { "brand": "Topcon", "models": ["GTS 700", "GTS 7500"] },
+            { "brand": "Trimble", "models": ["3603"] },
+            { "brand": "Zeiss", "models": ["S10, ELTA"] }
+          ]
+        },
+        {
+          "id": "a300",
+          "name": "GYROMAX™ A 300",
+          "tagline": "Fully automatic pre-orientation with smartphone operation",
+          "video": "/vids/A300_TS15_5.mp4",
+          "img": "/pics/kreisel_2.jpg",
+          "images": ["/pics/kreisel_2.jpg", "/pics/kreisel_1.jpg", "/pics/kreisel_3.jpg"],
+          "desc": "Precision gyroscope with manual measurement, fully automatic pre-orientation and measurement, and intuitive smartphone control. Mechanical adaptation for use in autocollimation.",
+          "techRows": [
+            { "label": "Measurement", "value": "Manual" },
+            { "label": "Sazi", "value": "typically < 5 mgon = 16 arcsec" },
+            { "label": "Internal", "value": "< 2 mgon = 6 arcsec" },
+            { "label": "Automation", "value": "Fully automatic pre-orientation & measurement" },
+            { "label": "Operation", "value": "Smartphone" },
+            { "label": "Mechanical adaptation", "value": "Can be used for autocollimation" }
+          ],
+          "advantages": ["Manual measurement", "Fully automatic pre-orientation & measurement", "Smartphone operation", "Mechanical adaptation for autocollimation", "High accuracy (Sazi / internal)"],
+          "adapters": [
+            { "brand": "Leica", "models": ["T16, T2", "T2002, T3000", "TC 1100", "TPS 300/400/700/800", "TPS 1200", "TS02/06/09/015"] },
+            { "brand": "Geomax", "models": ["ZTS 600"] },
+            { "brand": "Topcon", "models": ["GTS 700", "GTS 7500"] },
+            { "brand": "Trimble", "models": ["3603"] },
+            { "brand": "Zeiss", "models": ["S10, ELTA"] }
+          ]
+        },
+        {
+          "id": "gak",
+          "name": "WILD/Heerbrugg GAK",
+          "tagline": "Proven system – service & converters",
+          "img": "/pics/konverter_1.jpg",
+          "images": ["/pics/konverter_1.jpg", "/pics/konverter_2.jpg", "/pics/konverter_3.jpg"],
+          "desc": "We service, calibrate and supply converters for the proven WILD/Heerbrugg GAK system. Used converters available.",
+          "techRows": [
+            { "label": "Type", "value": "WILD/Heerbrugg GAK" },
+            { "label": "Converter price", "value": "€ 500 (net, used)" },
+            { "label": "Service", "value": "Calibration & Repair" }
+          ],
+          "advantages": ["Proven technology", "Spare parts available", "Calibration service", "Converters in stock"],
+          "adapters": []
+        }
       ],
-      "adaptersHeading": "Adapters",
-      "adaptersIntro": "The GYROMAX™ gyroscopes can be combined with various theodolites and tachymeters. Adapters are available for the following instruments:",
-      "adapters": [
-        { "brand": "Leica", "models": ["T16, T2", "T2002, T3000", "TC 1100", "TPS 300/400/700/800", "TPS 1200", "TS02/06/09/015"] },
-        { "brand": "Geomax", "models": ["ZTS 600"] },
-        { "brand": "Topcon", "models": ["GTS 700", "GTS 7500"] },
-        { "brand": "Trimble", "models": ["3603"] },
-        { "brand": "Zeiss", "models": ["S10, ELTA"] }
+      "applicationTitle": "Fields of Application",
+      "applications": ["Direction control in tunnel construction", "Mining", "University training", "Fast orientation to true north"]
+    },
+    "service": {
+      "title": "Service",
+      "intro": "We offer comprehensive services for North-Seeking Gyroscopes and precision measuring instruments.",
+      "requestCta": "Request Service",
+      "items": [
+        { "id": "calibration", "title": "Calibration", "desc": "Professional calibration of your surveying gyroscopes to manufacturer standards. Calibration certificate included. Fast turnaround times.", "image": "/pics/konverter_2.jpg" },
+        { "id": "repair", "title": "Repair", "desc": "Repair and maintenance of surveying gyroscopes of all makes, especially GYROMAX™ and WILD GAK. We also purchase defective instruments.", "image": "/pics/konverter_3.jpg" },
+        { "id": "training", "title": "Training", "desc": "Practical training for operators and technicians. Individual and group training. On-site or at our premises.", "image": "/pics/kreisel_2.jpg" }
       ],
-      "content": "GeoMessTechnik Heger develops and produces surveying gyroscopes for tunnel construction, mining, training and military applications. We are specialized in mounting gyroscopes that can be combined with almost all theodolites and tachymeters. For special applications, we also design adapters and measuring tools.",
-      "cta": "We are happy to advise you on our surveying gyroscopes and the GYROMAX™ range."
+      "gakEyebrow": "Purchase & Service",
+      "gakHeading": "WILD/Heerbrugg GAK",
+      "gakIntro": "We calibrate, maintain and repair surveying gyroscopes, especially WILD GAK. We also purchase defective instruments.",
+      "gakPrice": "Used WILD/Heerbrugg GAK converters available – € 500 (net).",
+      "gakEmail": "gmt@hegeroptik.de",
+      "gakContactCta": "Contact Form"
     },
-    "repair": {
-      "title": "Repair",
-      "description": "Calibration, repair and maintenance of surveying gyroscopes",
-      "paragraph1": "Our service includes the calibration of surveying gyroscopes as well as the repair and maintenance of gyro instruments, e.g. Wild GAK.",
-      "paragraph2Start": "We are constantly looking for Wild GAK gyroscopes, including defective ones. For offers and inquiries please send an email to ",
-      "inquiryEmail": "gmt@hegeroptik.de",
-      "paragraph2End": " or use our ",
-      "contactFormLabel": "contact form",
-      "paragraph2AfterLink": ".",
-      "converterHeading": "WILD/Heerbrugg GAK Converter",
-      "converterIntro": "We offer used WILD/Heerbrugg GAK converters.",
-      "converterPrice": "Used, €500 (net)",
-      "sidebarRepairHeading": "Repair",
-      "sidebarContactHeading": "Contact",
-      "sidebarPhoneLabel": "Phone",
-      "sidebarEmailLabel": "Email",
-      "sidebarEmail": "master@gmt-heger.com",
-      "content": "We calibrate, maintain and repair surveying gyroscopes, e.g. Wild GAK. Furthermore, we purchase Wild-GAK gyroscopes, including defective ones."
-    },
-    "purchase": {
-      "title": "Purchase Surveying Instruments",
-      "description": "We buy new, used and historical surveying equipment",
-      "content": "We constantly purchase new, used and historical surveying instruments as well as accessories and literature. Contact us with details about your equipment for a fair evaluation."
+    "history": {
+      "title": "History",
+      "intro": "GeoMessTechnik Heger has over 30 years of history in developing and manufacturing precision measuring instruments.",
+      "eyebrow": "About Us",
+      "heading": "GeoMessTechnik Heger",
+      "content": "GeoMessTechnik Heger was founded with the goal of developing high-precision North-Seeking Gyroscopes for industrial and scientific applications. Over the decades we have become the specialist for mounting gyroscopes compatible with virtually all common theodolites and total stations.\n\nOur GYROMAX™ system has set standards in accuracy, reliability and ease of use for years. Through continuous development we remain at the forefront of measurement technology.\n\nContent to be supplemented by GMT Heger.",
+      "milestonesHeading": "Milestones",
+      "milestones": [
+        { "year": "1990s", "label": "Foundation of GeoMessTechnik Heger" },
+        { "year": "2000s", "label": "Development of GYROMAX™ product line" },
+        { "year": "2010s", "label": "Bluetooth® integration & remote control" },
+        { "year": "Today", "label": "Over 30 years of precision engineering" }
+      ],
+      "contactCta": "Get in Touch",
+      "bannerTitle": "30+ Years of Precision Engineering"
     },
     "contact": {
-      "title": "Contact Us",
-      "description": "Get in touch with our team",
-      "content": "We're here to help with all your surveying gyroscope needs. Reach out to us via phone or email.",
+      "title": "Contact",
+      "intro": "We are happy to help with all questions about our North-Seeking Gyroscopes and services. Get in touch.",
+      "directContact": "Direct Contact",
+      "contactForm": "Contact Form",
+      "distributorTitle": "Become a Distributor",
+      "distributorNote": "Further distributors welcome – please contact us.",
+      "labels": {
+        "phone": "Phone",
+        "email": "Email",
+        "address": "Address"
+      },
       "form": {
-        "nameLabel": "Name",
-        "emailLabel": "Email",
-        "messageLabel": "Message",
-        "submitLabel": "Send Message"
+        "name": "Name *",
+        "company": "Company",
+        "email": "Email *",
+        "phone": "Phone",
+        "product": "Interest in product",
+        "message": "Message *",
+        "distributor": "I am interested in a distributor partnership",
+        "submit": "Send Message",
+        "success": "Thank you! We will get back to you shortly.",
+        "successMsg": "We will contact you at the email address provided.",
+        "close": "Close"
+      }
+    },
+    "inline": {
+      "eyebrow": "Write to us",
+      "heading": "Have questions?"
+    },
+    "footer": {
+      "ctaHeading": "Get in touch",
+      "ctaSub": "We are happy to advise you on our products and services.",
+      "tagline": "Development, manufacturing and service of North-Seeking Gyroscopes for over 30 years.",
+      "quicklinks": "Quick Links",
+      "contactHead": "Contact",
+      "addressHead": "Address",
+      "addressLines": ["GeoMessTechnik Heger", "Mühlenstraße 9", "17039 Wulkenzin", "Germany"],
+      "legal": "Imprint",
+      "privacy": "Privacy",
+      "rights": "All rights reserved.",
+      "imprint": {
+        "title": "Legal Notice",
+        "content": "GeoMessTechnik Heger\nMühlenstraße 9\n17039 Wulkenzin\nGermany\n\nPhone: +49 395 582 668 0\nEmail: info@gmt-heger.com\n\nResponsible for content:\nGMT Heger\n\nDisclaimer: The contents of this website have been created with the greatest possible care. We assume no liability for the accuracy, completeness or timeliness of the content."
       }
     }
   }

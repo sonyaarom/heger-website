@@ -2,6 +2,8 @@ import contentData from '@/data/content.json'
 
 export type Language = 'de' | 'en'
 
+export type Content = (typeof contentData)['de']
+
 export function getLanguage(): Language {
   if (typeof window !== 'undefined') {
     const saved = localStorage.getItem('language')
@@ -9,7 +11,6 @@ export function getLanguage(): Language {
       return saved
     }
   }
-  // Default to German
   return 'de'
 }
 
@@ -19,12 +20,7 @@ export function setLanguage(lang: Language) {
   }
 }
 
-export function getContent(lang?: Language) {
+export function getContent(lang?: Language): Content {
   const language = lang || getLanguage()
-  return contentData[language]
-}
-
-export function getServerLanguage(): Language {
-  // In a real app, you'd check cookies or headers
-  return 'de' // default
+  return contentData[language] as Content
 }

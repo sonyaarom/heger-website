@@ -2,14 +2,11 @@ import Script from 'next/script'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import SiteMain from '@/components/SiteMain'
+import InlineContactForm from '@/components/InlineContactForm'
 
 const GA_ID = 'G-GK2C4Y14B5'
 
-export default function SiteLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function SiteLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <Script
@@ -24,9 +21,12 @@ export default function SiteLayout({
           gtag('config', '${GA_ID}');
         `}
       </Script>
-      <Navigation />
-      <SiteMain>{children}</SiteMain>
-      <Footer />
+      <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+        <Navigation />
+        <SiteMain>{children}</SiteMain>
+        <InlineContactForm />
+        <Footer />
+      </div>
     </>
   )
 }

@@ -1,199 +1,385 @@
 'use client'
 
-import { useState, useEffect } from 'react'
-import { Phone, Mail, Send } from 'lucide-react'
-import { getContent } from '@/lib/i18n'
+import { useState } from 'react'
+import { useApp } from '@/components/AppContext'
+
+const ACCENT = '#c8102e'
+const ACCENT_HOVER = '#a00d25'
 
 export default function ContactPage() {
-  const [content, setContent] = useState(() => getContent('de'))
-  const [formData, setFormData] = useState({
+  const { c } = useApp()
+  const ct = c.contact
+  const [submitted, setSubmitted] = useState(false)
+  const [form, setForm] = useState({
     name: '',
+    company: '',
     email: '',
+    phone: '',
+    product: '',
     message: '',
+    distributor: false,
   })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
 
-  useEffect(() => {
-    setContent(getContent())
-  }, [])
-
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    setIsSubmitting(true)
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false)
-      setSubmitStatus('success')
-      setFormData({ name: '', email: '', message: '' })
-      setTimeout(() => setSubmitStatus('idle'), 5000)
-    }, 1000)
+    setSubmitted(true)
   }
 
-  const getInTouchText = content.navigation[0].label === 'Home' ? 'Get in Touch' : 'Kontakt aufnehmen'
-  const sendMessageText = content.navigation[0].label === 'Home' ? 'Send us a Message' : 'Senden Sie uns eine Nachricht'
-  const phoneLabel = content.navigation[0].label === 'Home' ? 'Phone' : 'Telefon'
-  const emailLabel = content.navigation[0].label === 'Home' ? 'Email' : 'E-Mail'
-  const successMessage = content.navigation[0].label === 'Home' 
-    ? "Message sent successfully! We'll get back to you soon."
-    : "Nachricht erfolgreich gesendet! Wir melden uns bald bei Ihnen."
+  const inputStyle: React.CSSProperties = {
+    width: '100%',
+    padding: '12px 14px',
+    border: '1px solid #ddd',
+    fontSize: 14,
+    fontFamily: 'inherit',
+    background: '#fff',
+    outline: 'none',
+    transition: 'border-color 0.2s',
+  }
+
+  const labelStyle: React.CSSProperties = {
+    display: 'block',
+    fontSize: 12,
+    fontWeight: 700,
+    color: '#333',
+    marginBottom: 6,
+    textTransform: 'uppercase',
+    letterSpacing: '0.05em',
+  }
 
   return (
-    <div className="bg-gradient-to-b from-white to-gray-50 min-h-screen">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <h1 className="text-4xl sm:text-5xl font-bold mb-6" style={{ color: 'var(--gray-900)' }}>
-          {content.contact.title}
-        </h1>
-        <p className="text-xl mb-12" style={{ color: 'var(--gray-700)' }}>
-          {content.contact.description}
-        </p>
+    <div>
+      <div
+        style={{
+          background: '#111',
+          padding: '56px 24px 48px',
+          borderBottom: `4px solid ${ACCENT}`,
+        }}
+      >
+        <div style={{ maxWidth: 1200, margin: '0 auto' }}>
+          <div
+            style={{
+              fontSize: 11,
+              fontWeight: 700,
+              color: ACCENT,
+              textTransform: 'uppercase',
+              letterSpacing: '0.12em',
+              marginBottom: 10,
+            }}
+          >
+            {c.site.name}
+          </div>
+          <h1
+            style={{
+              fontSize: 'clamp(28px, 4vw, 48px)',
+              fontWeight: 900,
+              color: '#fff',
+              margin: '0 0 12px',
+              letterSpacing: '-0.02em',
+            }}
+          >
+            {ct.title}
+          </h1>
+          <p
+            style={{
+              fontSize: 16,
+              color: 'rgba(255,255,255,0.65)',
+              margin: 0,
+              maxWidth: 600,
+              lineHeight: 1.7,
+            }}
+          >
+            {ct.intro}
+          </p>
+        </div>
+      </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          {/* Contact Information */}
+      <section style={{ padding: '72px 24px', background: '#fff' }}>
+        <div
+          style={{
+            maxWidth: 1200,
+            margin: '0 auto',
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+            gap: 64,
+          }}
+        >
           <div>
-            <h2 className="text-2xl font-semibold mb-6" style={{ color: 'var(--gray-900)' }}>
-              {getInTouchText}
+            <div
+              style={{
+                fontSize: 11,
+                fontWeight: 700,
+                color: ACCENT,
+                textTransform: 'uppercase',
+                letterSpacing: '0.12em',
+                marginBottom: 8,
+              }}
+            >
+              {ct.directContact}
+            </div>
+            <h2
+              style={{
+                fontSize: 28,
+                fontWeight: 900,
+                margin: '0 0 16px',
+                letterSpacing: '-0.02em',
+              }}
+            >
+              {c.site.fullName}
             </h2>
-            <p className="mb-8 leading-relaxed" style={{ color: 'var(--gray-700)' }}>
-              {content.contact.content}
-            </p>
-            
-            <div className="space-y-6">
+            <div style={{ width: 40, height: 3, background: ACCENT, marginBottom: 28 }} />
+
+            <div style={{ marginBottom: 22 }}>
+              <div style={{ ...labelStyle, color: '#888' }}>{ct.labels.phone}</div>
               <a
-                href={`tel:${content.site.phone}`}
-                className="flex items-center space-x-4 transition-colors group"
-                style={{ color: 'var(--gray-700)' }}
+                href={`tel:${c.site.phone.replace(/\s/g, '')}`}
+                style={{
+                  fontSize: 18,
+                  color: '#111',
+                  textDecoration: 'none',
+                  fontWeight: 600,
+                }}
               >
-                <div 
-                  className="p-3 rounded-lg transition-colors"
-                  style={{ backgroundColor: 'var(--primary-100)' }}
-                >
-                  <Phone className="h-6 w-6" style={{ color: 'var(--primary-600)' }} />
-                </div>
-                <div>
-                  <p className="text-sm" style={{ color: 'var(--gray-500)' }}>{phoneLabel}</p>
-                  <p className="font-semibold">{content.site.phone}</p>
-                </div>
+                {c.site.phone}
               </a>
-              
+            </div>
+
+            <div style={{ marginBottom: 22 }}>
+              <div style={{ ...labelStyle, color: '#888' }}>{ct.labels.email}</div>
               <a
-                href={`mailto:${content.site.email}`}
-                className="flex items-center space-x-4 transition-colors group"
-                style={{ color: 'var(--gray-700)' }}
+                href={`mailto:${c.site.email}`}
+                style={{
+                  fontSize: 18,
+                  color: '#111',
+                  textDecoration: 'none',
+                  fontWeight: 600,
+                }}
               >
-                <div 
-                  className="p-3 rounded-lg transition-colors"
-                  style={{ backgroundColor: 'var(--primary-100)' }}
-                >
-                  <Mail className="h-6 w-6" style={{ color: 'var(--primary-600)' }} />
-                </div>
-                <div>
-                  <p className="text-sm" style={{ color: 'var(--gray-500)' }}>{emailLabel}</p>
-                  <p className="font-semibold">{content.site.email}</p>
-                </div>
+                {c.site.email}
               </a>
+            </div>
+
+            <div style={{ marginBottom: 32 }}>
+              <div style={{ ...labelStyle, color: '#888' }}>{ct.labels.address}</div>
+              <div style={{ fontSize: 15, color: '#333', lineHeight: 1.6 }}>{c.site.address}</div>
+            </div>
+
+            <div
+              style={{
+                borderLeft: `3px solid ${ACCENT}`,
+                padding: '16px 20px',
+                background: '#f8f8f8',
+              }}
+            >
+              <div
+                style={{
+                  fontSize: 13,
+                  fontWeight: 800,
+                  color: ACCENT,
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.05em',
+                  marginBottom: 6,
+                }}
+              >
+                {ct.distributorTitle}
+              </div>
+              <div style={{ fontSize: 14, color: '#333', lineHeight: 1.6 }}>
+                {ct.distributorNote}
+              </div>
             </div>
           </div>
 
-          {/* Contact Form */}
-          <div className="bg-white rounded-xl shadow-lg p-8">
-            <h2 className="text-2xl font-semibold mb-6" style={{ color: 'var(--gray-900)' }}>
-              {sendMessageText}
+          <div>
+            <div
+              style={{
+                fontSize: 11,
+                fontWeight: 700,
+                color: ACCENT,
+                textTransform: 'uppercase',
+                letterSpacing: '0.12em',
+                marginBottom: 8,
+              }}
+            >
+              {ct.contactForm}
+            </div>
+            <h2
+              style={{
+                fontSize: 28,
+                fontWeight: 900,
+                margin: '0 0 16px',
+                letterSpacing: '-0.02em',
+              }}
+            >
+              {ct.contactForm}
             </h2>
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium mb-2" style={{ color: 'var(--gray-700)' }}>
-                  {content.contact.form.nameLabel}
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  required
-                  value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:border-transparent transition-all"
-                  style={{ 
-                    borderColor: 'var(--gray-300)',
-                    backgroundColor: '#fff',
-                    color: 'var(--gray-900)',
-                    '--tw-ring-color': 'var(--primary-500)'
-                  } as React.CSSProperties}
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium mb-2" style={{ color: 'var(--gray-700)' }}>
-                  {content.contact.form.emailLabel}
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  required
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:border-transparent transition-all"
-                  style={{ 
-                    borderColor: 'var(--gray-300)',
-                    backgroundColor: '#fff',
-                    color: 'var(--gray-900)',
-                    '--tw-ring-color': 'var(--primary-500)'
-                  } as React.CSSProperties}
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium mb-2" style={{ color: 'var(--gray-700)' }}>
-                  {content.contact.form.messageLabel}
-                </label>
-                <textarea
-                  id="message"
-                  required
-                  rows={5}
-                  value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:border-transparent transition-all resize-none"
-                  style={{ 
-                    borderColor: 'var(--gray-300)',
-                    backgroundColor: '#fff',
-                    color: 'var(--gray-900)',
-                    '--tw-ring-color': 'var(--primary-500)'
-                  } as React.CSSProperties}
-                />
-              </div>
-              
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
-                style={{ 
-                  backgroundColor: 'var(--primary-600)',
-                  '--tw-ring-color': 'var(--primary-500)'
-                } as React.CSSProperties}
+            <div style={{ width: 40, height: 3, background: ACCENT, marginBottom: 28 }} />
+
+            {submitted ? (
+              <div
+                style={{
+                  border: '2px solid #2b7a3d',
+                  background: '#eaf5ed',
+                  padding: '32px 24px',
+                  textAlign: 'center',
+                }}
               >
-                {isSubmitting ? (
-                  content.navigation[0].label === 'Home' ? 'Sending...' : 'Wird gesendet...'
-                ) : (
-                  <>
-                    <Send className="mr-2 h-5 w-5" />
-                    {content.contact.form.submitLabel}
-                  </>
-                )}
-              </button>
-              
-              {submitStatus === 'success' && (
-                <div className="p-4 border rounded-lg" style={{ 
-                  backgroundColor: 'rgba(34, 197, 94, 0.1)',
-                  borderColor: 'var(--success)',
-                  color: '#166534'
-                }}>
-                  {successMessage}
+                <div
+                  style={{
+                    width: 48,
+                    height: 48,
+                    borderRadius: '50%',
+                    background: '#2b7a3d',
+                    color: '#fff',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontSize: 24,
+                    fontWeight: 900,
+                    marginBottom: 16,
+                  }}
+                >
+                  ✓
                 </div>
-              )}
-            </form>
+                <div style={{ fontSize: 18, fontWeight: 800, color: '#1a1a1a', marginBottom: 8 }}>
+                  {ct.form.success}
+                </div>
+                <div style={{ fontSize: 14, color: '#444' }}>{ct.form.successMsg}</div>
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit}>
+                <div
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+                    gap: 16,
+                    marginBottom: 16,
+                  }}
+                >
+                  <div>
+                    <label style={labelStyle}>{ct.form.name}</label>
+                    <input
+                      type="text"
+                      required
+                      value={form.name}
+                      onChange={(e) => setForm({ ...form, name: e.target.value })}
+                      onFocus={(e) => (e.currentTarget.style.borderColor = ACCENT)}
+                      onBlur={(e) => (e.currentTarget.style.borderColor = '#ddd')}
+                      style={inputStyle}
+                    />
+                  </div>
+                  <div>
+                    <label style={labelStyle}>{ct.form.company}</label>
+                    <input
+                      type="text"
+                      value={form.company}
+                      onChange={(e) => setForm({ ...form, company: e.target.value })}
+                      onFocus={(e) => (e.currentTarget.style.borderColor = ACCENT)}
+                      onBlur={(e) => (e.currentTarget.style.borderColor = '#ddd')}
+                      style={inputStyle}
+                    />
+                  </div>
+                </div>
+
+                <div
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+                    gap: 16,
+                    marginBottom: 16,
+                  }}
+                >
+                  <div>
+                    <label style={labelStyle}>{ct.form.email}</label>
+                    <input
+                      type="email"
+                      required
+                      value={form.email}
+                      onChange={(e) => setForm({ ...form, email: e.target.value })}
+                      onFocus={(e) => (e.currentTarget.style.borderColor = ACCENT)}
+                      onBlur={(e) => (e.currentTarget.style.borderColor = '#ddd')}
+                      style={inputStyle}
+                    />
+                  </div>
+                  <div>
+                    <label style={labelStyle}>{ct.form.phone}</label>
+                    <input
+                      type="tel"
+                      value={form.phone}
+                      onChange={(e) => setForm({ ...form, phone: e.target.value })}
+                      onFocus={(e) => (e.currentTarget.style.borderColor = ACCENT)}
+                      onBlur={(e) => (e.currentTarget.style.borderColor = '#ddd')}
+                      style={inputStyle}
+                    />
+                  </div>
+                </div>
+
+                <div style={{ marginBottom: 16 }}>
+                  <label style={labelStyle}>{ct.form.product}</label>
+                  <input
+                    type="text"
+                    value={form.product}
+                    onChange={(e) => setForm({ ...form, product: e.target.value })}
+                    onFocus={(e) => (e.currentTarget.style.borderColor = ACCENT)}
+                    onBlur={(e) => (e.currentTarget.style.borderColor = '#ddd')}
+                    style={inputStyle}
+                  />
+                </div>
+
+                <div style={{ marginBottom: 20 }}>
+                  <label style={labelStyle}>{ct.form.message}</label>
+                  <textarea
+                    required
+                    rows={5}
+                    value={form.message}
+                    onChange={(e) => setForm({ ...form, message: e.target.value })}
+                    onFocus={(e) => (e.currentTarget.style.borderColor = ACCENT)}
+                    onBlur={(e) => (e.currentTarget.style.borderColor = '#ddd')}
+                    style={{ ...inputStyle, resize: 'vertical' }}
+                  />
+                </div>
+
+                <label
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: 10,
+                    fontSize: 14,
+                    color: '#333',
+                    cursor: 'pointer',
+                    marginBottom: 24,
+                  }}
+                >
+                  <input
+                    type="checkbox"
+                    checked={form.distributor}
+                    onChange={(e) => setForm({ ...form, distributor: e.target.checked })}
+                    style={{ width: 16, height: 16, accentColor: ACCENT, cursor: 'pointer' }}
+                  />
+                  {ct.form.distributor}
+                </label>
+
+                <button
+                  type="submit"
+                  onMouseEnter={(e) => (e.currentTarget.style.background = ACCENT_HOVER)}
+                  onMouseLeave={(e) => (e.currentTarget.style.background = ACCENT)}
+                  style={{
+                    background: ACCENT,
+                    color: '#fff',
+                    border: 'none',
+                    padding: '14px 28px',
+                    fontSize: 14,
+                    fontWeight: 700,
+                    cursor: 'pointer',
+                    fontFamily: 'inherit',
+                    letterSpacing: '0.02em',
+                  }}
+                >
+                  {ct.form.submit}
+                </button>
+              </form>
+            )}
           </div>
         </div>
-      </div>
+      </section>
     </div>
   )
 }

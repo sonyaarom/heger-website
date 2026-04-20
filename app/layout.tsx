@@ -1,21 +1,28 @@
 import type { Metadata } from 'next'
-import { Inter, Syne } from 'next/font/google'
+import { Barlow } from 'next/font/google'
 import './globals.css'
-import ConceptSwitcherGate from '@/components/concepts/ConceptSwitcherGate'
+import { AppProvider } from '@/components/AppContext'
+import ContactModal from '@/components/ContactModal'
 
-const inter = Inter({ subsets: ['latin'] })
-const syne = Syne({ subsets: ['latin'], variable: '--font-syne' })
+const barlow = Barlow({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800', '900'],
+  variable: '--font-barlow',
+})
 
 export const metadata: Metadata = {
-  title: 'GeoMessTechnik Heger - Surveying Gyroscopes | Professional Precision Instruments',
-  description: 'Professional surveying gyroscopes for tunnel construction, mining, training and military applications. Over 30 years of expertise in precision engineering.',
-  keywords: 'surveying gyroscopes, theodolites, tachymeters, tunnel construction, mining equipment, Wild GAK, GYROMAX',
+  title: 'GMT Heger – North-Seeking Gyroscopes',
+  description:
+    'GeoMessTechnik Heger – North-Seeking Gyroscopes für Tunnelbau, Bergbau und Hochschulausbildung. Präzisionstechnik seit über 30 Jahren.',
+  keywords:
+    'North-Seeking Gyroscopes, GYROMAX, Vermessungskreisel, Tunnelbau, Bergbau, Theodolit, Tachymeter, WILD GAK',
   authors: [{ name: 'GeoMessTechnik Heger' }],
   openGraph: {
-    title: 'GeoMessTechnik Heger - Surveying Gyroscopes',
-    description: 'Professional surveying gyroscopes for tunnel construction, mining, training and military applications.',
+    title: 'GMT Heger – North-Seeking Gyroscopes',
+    description:
+      'GeoMessTechnik Heger – North-Seeking Gyroscopes für Tunnelbau, Bergbau und Hochschulausbildung.',
     type: 'website',
-    locale: 'en_US',
+    locale: 'de_DE',
   },
   robots: {
     index: true,
@@ -33,13 +40,9 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="de">
       <head>
         <script
           type="application/ld+json"
@@ -48,21 +51,26 @@ export default function RootLayout({
               '@context': 'https://schema.org',
               '@type': 'Organization',
               name: 'GeoMessTechnik Heger',
-              description: 'Professional surveying gyroscopes manufacturer',
+              description: 'North-Seeking Gyroscopes manufacturer',
               url: 'https://www.gmt-heger.com',
               telephone: '+49 395 582 668 0',
               email: 'info@gmt-heger.com',
               address: {
                 '@type': 'PostalAddress',
+                streetAddress: 'Mühlenstraße 9',
+                postalCode: '17039',
+                addressLocality: 'Wulkenzin',
                 addressCountry: 'DE',
               },
             }),
           }}
         />
       </head>
-      <body className={`${inter.className} ${syne.variable}`}>
-        {children}
-        <ConceptSwitcherGate />
+      <body className={`${barlow.variable}`} style={{ fontFamily: 'var(--font-barlow), Barlow, "Helvetica Neue", Helvetica, Arial, sans-serif' }}>
+        <AppProvider>
+          {children}
+          <ContactModal />
+        </AppProvider>
       </body>
     </html>
   )

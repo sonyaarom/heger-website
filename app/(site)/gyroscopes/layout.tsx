@@ -1,16 +1,17 @@
 import { Metadata } from 'next'
 import contentData from '@/data/content.json'
 
-const en = (contentData as { en: { gyroscopes: { title: string; description: string } } }).en
+const en = contentData.en
 const baseUrl = 'https://www.gmt-heger.com'
 
 export const metadata: Metadata = {
-  title: `${en.gyroscopes.title} - GeoMessTechnik Heger`,
-  description: en.gyroscopes.description,
-  keywords: 'surveying gyroscopes, GYROMAX, theodolite adapters, tunnel surveying, mining equipment, precision instruments',
+  title: `${en.gyroscopes.title} – GMT Heger`,
+  description: en.gyroscopes.intro,
+  keywords:
+    'north-seeking gyroscopes, GYROMAX, theodolite adapters, tunnel construction, mining, WILD GAK',
   openGraph: {
-    title: `${en.gyroscopes.title} - GeoMessTechnik Heger`,
-    description: en.gyroscopes.description,
+    title: `${en.gyroscopes.title} – GMT Heger`,
+    description: en.gyroscopes.intro,
     type: 'website',
     url: `${baseUrl}/gyroscopes`,
   },
@@ -19,10 +20,6 @@ export const metadata: Metadata = {
   },
 }
 
-export default function GyroscopesLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function GyroscopesLayout({ children }: { children: React.ReactNode }) {
   return <>{children}</>
 }
