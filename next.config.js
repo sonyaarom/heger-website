@@ -1,10 +1,16 @@
 /** @type {import('next').NextConfig} */
+const basePath = process.env.BASE_PATH || ''
+
 const nextConfig = {
   reactStrictMode: true,
   output: 'export',
+  env: {
+    // Inlined at build time so client components can prefix /pics, /vids on GitHub Pages.
+    NEXT_PUBLIC_BASE_PATH: basePath,
+  },
   // For GitHub Pages: repo name as base path (e.g. /PashaWebsite). Leave empty for local dev or custom domain.
-  basePath: process.env.BASE_PATH || '',
-  assetPrefix: process.env.BASE_PATH ? `${process.env.BASE_PATH}/` : '',
+  basePath,
+  assetPrefix: basePath ? `${basePath}/` : '',
   images: {
     unoptimized: true, // required for static export when hosting on GitHub Pages
   },

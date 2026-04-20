@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { useApp } from '@/components/AppContext'
+import { assetUrl } from '@/lib/assetUrl'
 
 const ACCENT = '#c8102e'
 const ACCENT_HOVER = '#a00d25'
@@ -38,7 +39,7 @@ export default function HomePage() {
         }}
       >
         <img
-          src="/pics/antarktisstation_neumayer_1.jpg"
+          src={assetUrl('/pics/antarktisstation_neumayer_1.jpg')}
           alt="North-Seeking Gyroscope in the field"
           style={{
             position: 'absolute',
@@ -323,7 +324,7 @@ export default function HomePage() {
             }}
           >
             <img
-              src="/pics/kreisel_1.jpg"
+              src={assetUrl('/pics/kreisel_1.jpg')}
               alt="GYROMAX Gyroscope"
               style={{
                 width: '100%',
@@ -336,7 +337,7 @@ export default function HomePage() {
               }}
             />
             <img
-              src="/pics/kreisel_2.jpg"
+              src={assetUrl('/pics/kreisel_2.jpg')}
               alt="GYROMAX Detail"
               style={{
                 width: '100%',
@@ -348,7 +349,7 @@ export default function HomePage() {
               }}
             />
             <img
-              src="/pics/kreisel_3.jpg"
+              src={assetUrl('/pics/kreisel_3.jpg')}
               alt="GYROMAX In Use"
               style={{
                 width: '100%',

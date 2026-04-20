@@ -1,4 +1,5 @@
 import contentData from '@/data/content.json'
+import { rewritePublicAssetPaths } from '@/lib/assetUrl'
 
 export type Language = 'de' | 'en'
 
@@ -22,5 +23,6 @@ export function setLanguage(lang: Language) {
 
 export function getContent(lang?: Language): Content {
   const language = lang || getLanguage()
-  return contentData[language] as Content
+  const raw = contentData[language] as Content
+  return rewritePublicAssetPaths(raw)
 }

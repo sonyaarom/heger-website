@@ -1,6 +1,7 @@
 'use client'
 
 import { useApp } from '@/components/AppContext'
+import { assetUrl } from '@/lib/assetUrl'
 
 const ACCENT = '#c8102e'
 const ACCENT_HOVER = '#a00d25'
@@ -226,7 +227,7 @@ export default function ServicePage() {
               (img, i) => (
                 <img
                   key={i}
-                  src={img}
+                  src={assetUrl(img)}
                   alt="GAK Konverter"
                   style={{ width: '100%', aspectRatio: '4/3', objectFit: 'cover' }}
                 />

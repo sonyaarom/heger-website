@@ -1,6 +1,7 @@
 'use client'
 
 import { useApp } from '@/components/AppContext'
+import { assetUrl } from '@/lib/assetUrl'
 
 const ACCENT = '#c8102e'
 const ACCENT_HOVER = '#a00d25'
@@ -180,7 +181,7 @@ export default function HistoryPage() {
 
       <section style={{ position: 'relative', height: 320, overflow: 'hidden' }}>
         <img
-          src="/pics/antarktisstation_neumayer_1.jpg"
+          src={assetUrl('/pics/antarktisstation_neumayer_1.jpg')}
           alt="GMT Heger in the field"
           style={{ width: '100%', height: '100%', objectFit: 'cover' }}
         />
