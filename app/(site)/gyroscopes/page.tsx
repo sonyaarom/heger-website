@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { useApp } from '@/components/AppContext'
+import Gyroscope3D from '@/components/Gyroscope3D'
 
 const ACCENT = '#c8102e'
 const ACCENT_HOVER = '#a00d25'
@@ -247,9 +248,12 @@ function ProductDetail({
 }) {
   const { c, openContact } = useApp()
   const g = c.gyroscopes
-  const [activeImg, setActiveImg] = useState(0)
+  const hasVideo = 'video' in product && !!product.video
+  const [activeIdx, setActiveIdx] = useState(0)
   const images = product.images
   const otherProducts = g.products.filter((p) => p.id !== product.id)
+  const videoIdx = hasVideo ? images.length : -1
+  const showingVideo = activeIdx === videoIdx
 
   return (
     <div>
@@ -304,65 +308,119 @@ function ProductDetail({
           }}
         >
           <div>
-            <img
-              src={images[activeImg]}
-              alt={product.name}
+            <div
               style={{
                 width: '100%',
                 aspectRatio: '4/3',
-                objectFit: 'cover',
-                display: 'block',
+                background: showingVideo ? '#000' : '#f5f5f5',
                 marginBottom: 8,
+                overflow: 'hidden',
+                position: 'relative',
               }}
-            />
-            <div style={{ display: 'flex', gap: 8 }}>
+            >
+              {showingVideo && hasVideo ? (
+                <Gyroscope3D
+                  src={product.video!}
+                  ariaLabel={`${product.name} — ${g.video3dHeading}`}
+                />
+              ) : (
+                <img
+                  src={images[activeIdx]}
+                  alt={product.name}
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    display: 'block',
+                  }}
+                />
+              )}
+            </div>
+            <div
+              style={{
+                display: 'grid',
+                gridTemplateColumns: `repeat(${images.length + (hasVideo ? 1 : 0)}, 1fr)`,
+                gap: 8,
+              }}
+            >
               {images.map((img, i) => (
                 <img
                   key={i}
                   src={img}
                   alt=""
-                  onClick={() => setActiveImg(i)}
+                  onClick={() => setActiveIdx(i)}
                   style={{
-                    width: '31%',
+                    width: '100%',
                     aspectRatio: '4/3',
                     objectFit: 'cover',
                     cursor: 'pointer',
-                    border: activeImg === i ? `2px solid ${ACCENT}` : '2px solid transparent',
+                    border: activeIdx === i ? `2px solid ${ACCENT}` : '2px solid transparent',
                     transition: 'border-color 0.15s',
+                    display: 'block',
                   }}
                 />
               ))}
-            </div>
-            {'video' in product && product.video ? (
-              <div style={{ marginTop: 28 }}>
-                <div
-                  style={{
-                    fontSize: 12,
-                    fontWeight: 700,
-                    color: '#111',
-                    textTransform: 'uppercase',
-                    letterSpacing: '0.08em',
-                    marginBottom: 12,
-                  }}
-                >
-                  {g.video3dHeading}
-                </div>
-                <video
-                  controls
-                  playsInline
-                  preload="metadata"
+              {hasVideo && (
+                <button
+                  type="button"
+                  onClick={() => setActiveIdx(videoIdx)}
+                  aria-label={g.video3dHeading}
                   style={{
                     width: '100%',
-                    aspectRatio: '16/9',
-                    background: '#111',
-                    display: 'block',
+                    aspectRatio: '4/3',
+                    position: 'relative',
+                    background: '#000',
+                    border: showingVideo ? `2px solid ${ACCENT}` : '2px solid transparent',
+                    cursor: 'pointer',
+                    padding: 0,
+                    display: 'grid',
+                    placeItems: 'center',
+                    overflow: 'hidden',
+                    transition: 'border-color 0.15s',
                   }}
-                  aria-label={`${product.name} — ${g.video3dHeading}`}
                 >
-                  <source src={product.video} type="video/mp4" />
-                </video>
-              </div>
-            ) : null}
+                  <div
+                    aria-hidden
+                    style={{
+                      position: 'absolute',
+                      inset: 0,
+                      background:
+                        'radial-gradient(circle at 50% 50%, rgba(200,16,46,0.35) 0%, rgba(0,0,0,0.9) 70%)',
+                    }}
+                  />
+                  <div
+                    aria-hidden
+                    style={{
+                      position: 'relative',
+                      width: 0,
+                      height: 0,
+                      borderLeft: '14px solid #fff',
+                      borderTop: '10px solid transparent',
+                      borderBottom: '10px solid transparent',
+                      marginLeft: 4,
+                      filter: `drop-shadow(0 0 6px ${ACCENT})`,
+                    }}
+                  />
+                  <div
+                    style={{
+                      position: 'absolute',
+                      bottom: 4,
+                      left: 0,
+                      right: 0,
+                      fontSize: 9,
+                      fontWeight: 700,
+                      color: '#fff',
+                      letterSpacing: '0.1em',
+                      textTransform: 'uppercase',
+                      textAlign: 'center',
+                      textShadow: '0 1px 2px rgba(0,0,0,0.8)',
+                    }}
+                  >
+                    {g.video3dHeading}
+                  </div>
+                </button>
+              )}
+            </div>
           </div>
 
           <div>

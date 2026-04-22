@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { useApp } from './AppContext'
+import { assetUrl } from '@/lib/assetUrl'
 
 const ACCENT = '#c8102e'
 const ACCENT_HOVER = '#a00d25'
@@ -116,40 +117,45 @@ export default function Navigation() {
           <Link
             href="/"
             onClick={() => setMenuOpen(false)}
+            aria-label={c.site.fullName}
             style={{
               background: 'none',
               border: 'none',
               cursor: 'pointer',
               display: 'flex',
               alignItems: 'center',
-              gap: 12,
+              gap: 14,
               padding: 0,
               textDecoration: 'none',
             }}
           >
-            <div style={{ display: 'flex', flexDirection: 'column', lineHeight: 1.1 }}>
+            <img
+              src={assetUrl('/pics/gmt-logo.jpg')}
+              alt={c.site.fullName}
+              style={{
+                height: 44,
+                width: 'auto',
+                display: 'block',
+                objectFit: 'contain',
+              }}
+            />
+            {!isMobile && (
               <span
                 style={{
-                  fontSize: 20,
-                  fontWeight: 800,
-                  color: ACCENT,
-                  letterSpacing: '-0.02em',
+                  fontSize: 14,
+                  fontWeight: 600,
+                  color: '#333',
+                  letterSpacing: '0.04em',
+                  fontStyle: 'italic',
+                  borderLeft: `2px solid ${ACCENT}`,
+                  paddingLeft: 14,
+                  lineHeight: 1.2,
+                  whiteSpace: 'nowrap',
                 }}
               >
-                {c.site.name}
+                Wir geben Orientierung
               </span>
-              <span
-                style={{
-                  fontSize: 11,
-                  color: '#666',
-                  letterSpacing: '0.08em',
-                  textTransform: 'uppercase',
-                  fontWeight: 500,
-                }}
-              >
-                GeoMessTechnik
-              </span>
-            </div>
+            )}
           </Link>
 
           {!isMobile && (
